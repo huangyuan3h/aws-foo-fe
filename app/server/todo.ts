@@ -8,9 +8,10 @@ export interface TodoType {
 export let todoList: TodoType[] = [];
 
 
-export const addItem = (text: string): void => {
+export const addItem = (text: string): TodoType => {
     const item = { id: cuid(), text } as TodoType;
     todoList.push(item)
+    return item;
 }
 
 
